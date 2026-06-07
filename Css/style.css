@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    background: url("../snake-game-1680-x-1050-background-6syqer1fr6oahe0b.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    background: linear-gradient(rgb(170, 236, 170), rgb(236,236,167));
+    border: 3px solid black;
+    width: 90vmin;
+    height: 90vmin;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+}
+#scoreBox{
+    position: absolute;
+    top:9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#hiscoreBox{
+     position: absolute;
+    top:59px;
+    right: 149px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.head {
+    background: linear-gradient(red,yellow);
+    border:2px solid purple;
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake {
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food {
+    background:linear-gradient(red,purple);
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
+/* ================= CONTROLS CONTAINER ================= */
+.controls{
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    gap: 25px;
+    z-index: 10;
+}
+
+/* ================= COMMON BUTTON STYLE ================= */
+.controls button{
+    padding: 12px 28px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ================= PAUSE BUTTON ================= */
+#pauseBtn{
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+}
+
+#pauseBtn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(255,87,34,0.7);
+}
+
+/* ================= RESTART BUTTON ================= */
+#restartBtn{
+    background: linear-gradient(135deg, #4caf50, #2e7d32);
+}
+
+#restartBtn:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(76,175,80,0.7);
+}
+
+/* ================= ACTIVE CLICK EFFECT ================= */
+.controls button:active{
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
